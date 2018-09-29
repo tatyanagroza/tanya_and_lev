@@ -1,0 +1,20 @@
+body
+{
+    background-color: peru;
+}
+
+a
+{
+    background-color: darkorchid;
+    padding: 10px;
+    display: block;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+a:hover
+{
+    background-color: khaki;
+    color: white;
+}
