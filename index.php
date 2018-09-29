@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Title</title>
-</head>
-<body>
+<?php
 
-</body>
-</html>
+require_once "header.php";
 
-Главная страница
-<br><a href="for.php">Цыклы</a>
-<br><a href="http://vk.com">vk.com</a>
+require_once "footer.php";
+
+
