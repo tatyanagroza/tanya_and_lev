@@ -1,11 +1,15 @@
-Главная страница
 <?php
 $result = db("SELECT menu_name FROM pages");
 
+while($row = mysqli_fetch_assoc($result))
+{
+    $menu[]=$row;
+}
+
+
+foreach ($menu as $value)
+{
+    echo "<a href=\"index.php?\">".$value["menu_name"]."</a>";
+}
 
 ?>
-
-
-<br><a href="for.php">Цыклы</a>
-<br><a href="if.php">Условия</a>
-<br><a href="http://vk.com">vk.com</a>
