@@ -1,20 +1,27 @@
 body
 {
-    background-color: peru;
+    background: url("../img/logo.png");
 }
 
 a
 {
-    background-color: darkorchid;
+    background: url("../img/batton2.jpg");
     padding: 10px;
+    padding-left: 45px;
     display: block;
     width: 150px;
     text-decoration: none;
     border-radius: 20px;
+    color: white;
+    margin-bottom: 5px;
+
 }
 
 a:hover
 {
     background-color: khaki;
-    color: white;
+    margin-left: 30px;
+    padding-left: 90px;
+    transition-duration: 1s;
+    background: url("../img/fon.png");
 }
