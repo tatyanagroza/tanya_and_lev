@@ -1,5 +1,5 @@
 <?php
-$result = db("SELECT menu_name FROM pages");
+$result = db("SELECT id, menu_name FROM pages");
 
 while($row = mysqli_fetch_assoc($result))
 {
@@ -9,7 +9,7 @@ while($row = mysqli_fetch_assoc($result))
 
 foreach ($menu as $value)
 {
-    echo "<a href=\"index.php?\">".$value["menu_name"]."</a>";
+    echo "<a href=\"index.php?page={$value['id']}\">{$value['menu_name']}</a>";
 }
 
 ?>
