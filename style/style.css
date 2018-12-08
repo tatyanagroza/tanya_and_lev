@@ -9,7 +9,7 @@ a
     padding: 10px;
     padding-left: 45px;
     display: block;
-    width: 150px;
+    width: 180px;
     text-decoration: none;
     border-radius: 20px;
     color: white;
@@ -24,4 +24,14 @@ a:hover
     padding-left: 90px;
     transition-duration: 1s;
     background: url("../img/fon.png");
+}
+
+.header
+{
+    text-align: center;
+}
+
+#site
+{
+    padding: 5px;
 }
