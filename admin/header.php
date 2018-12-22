@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!<!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style/style.css" />
-    <title>Document</title>
+    <title>Админка</title>
 </head>
 <body>
-
+<h1>админка</h1>
