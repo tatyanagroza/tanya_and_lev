@@ -17,5 +17,24 @@ function db($sql)
 function login($data)
 {
     $sql = "SELECT * FROM users where login ='{$data['login']}'";
-    echo $sql;
+    $result = db($sql);
+    $user = mysqli_fetch_assoc($result);
+
+    if($data['pass'] == $user['password'])
+    {
+        $_SESSION['loged'] = $user['name'];
+        header('Refresh: 0; URL=index.php');
+    }
+
+}
+
+function pagelist()
+{
+    $sql = "SELECT id, menu_name FROM pages";
+    $result = db($sql);
+    while ($page = mysqli_fetch_assoc($result))
+    {
+        $pages[] = $page;
+    }
+    return $pages;
 }
