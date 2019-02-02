@@ -30,7 +30,7 @@ function login($data)
 
 function pagelist()
 {
-    $sql = "SELECT id, menu_name FROM pages";
+    $sql = "SELECT id, menu_name, created_at, updated_at FROM pages";
     $result = db($sql);
     while ($page = mysqli_fetch_assoc($result))
     {
@@ -38,3 +38,29 @@ function pagelist()
     }
     return $pages;
 }
+
+function pageadd($data)
+{
+    $date = time();
+    $sql = "INSERT INTO pages (menu_name, content, created_at) VALUES ('{$data['menu_name']}','{$data['content']}','{$date}')";
+    if (db($sql))
+    {
+        echo "Страница успешно добавлена на сайт";
+    }
+}
+
+function getDay ($day)
+{
+
+    $days['Sunday'] = "Воскресенье";
+    $days['Monday'] = "Понедельник";
+    $days['Tuesday'] = "Вторник";
+    $days['Wednesday'] = "Среда";
+    $days['Thursday'] = "Четверг";
+    $days[' Friday'] = "Пятница";
+    $days['Saturday'] = "Суббота";
+
+    return $days[$day];
+
+}
+
